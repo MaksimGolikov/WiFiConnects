@@ -32,21 +32,23 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bn_ConnectToWifi = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lb_WiFiConnectState = new System.Windows.Forms.Label();
-            this.lView_wifiConnects = new System.Windows.Forms.ListView();
-            this.colAccessPoint = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colSignalPower = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.unitTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bn_ConnectToWifi = new System.Windows.Forms.Button();
+            this.tb_nameSelectedWiFi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lb_WiFiConnectState = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tb_PasswordToSelectedWiFi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lView_wifiConnects = new System.Windows.Forms.ListView();
+            this.colAccessPoint = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSignalPower = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +68,9 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem});
+            this.openToolStripMenuItem,
+            this.refreshPointsToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -83,104 +87,7 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // bn_ConnectToWifi
-            // 
-            this.bn_ConnectToWifi.Location = new System.Drawing.Point(9, 127);
-            this.bn_ConnectToWifi.Name = "bn_ConnectToWifi";
-            this.bn_ConnectToWifi.Size = new System.Drawing.Size(220, 23);
-            this.bn_ConnectToWifi.TabIndex = 1;
-            this.bn_ConnectToWifi.Text = "Connect";
-            this.bn_ConnectToWifi.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(65, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Name";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lb_WiFiConnectState);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.bn_ConnectToWifi);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 208);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 157);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Selected wifi point";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(65, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "State";
-            // 
-            // lb_WiFiConnectState
-            // 
-            this.lb_WiFiConnectState.AutoSize = true;
-            this.lb_WiFiConnectState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_WiFiConnectState.Location = new System.Drawing.Point(62, 30);
-            this.lb_WiFiConnectState.Name = "lb_WiFiConnectState";
-            this.lb_WiFiConnectState.Size = new System.Drawing.Size(49, 16);
-            this.lb_WiFiConnectState.TabIndex = 8;
-            this.lb_WiFiConnectState.Text = "status";
-            // 
-            // lView_wifiConnects
-            // 
-            this.lView_wifiConnects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colAccessPoint,
-            this.colSignalPower});
-            this.lView_wifiConnects.Location = new System.Drawing.Point(13, 45);
-            this.lView_wifiConnects.Name = "lView_wifiConnects";
-            this.lView_wifiConnects.Size = new System.Drawing.Size(235, 157);
-            this.lView_wifiConnects.TabIndex = 6;
-            this.lView_wifiConnects.UseCompatibleStateImageBehavior = false;
-            this.lView_wifiConnects.View = System.Windows.Forms.View.Details;
-            // 
-            // colAccessPoint
-            // 
-            this.colAccessPoint.Text = "Access point";
-            this.colAccessPoint.Width = 103;
-            // 
-            // colSignalPower
-            // 
-            this.colSignalPower.Text = "Signal strength";
-            this.colSignalPower.Width = 125;
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // unitTestToolStripMenuItem
             // 
@@ -197,18 +104,137 @@
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
             this.startToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.startToolStripMenuItem.Text = "Start";
+            this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // finishToolStripMenuItem
             // 
             this.finishToolStripMenuItem.Name = "finishToolStripMenuItem";
             this.finishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.finishToolStripMenuItem.Text = "Finish";
+            this.finishToolStripMenuItem.Click += new System.EventHandler(this.finishToolStripMenuItem_Click);
             // 
             // showLogToolStripMenuItem
             // 
             this.showLogToolStripMenuItem.Name = "showLogToolStripMenuItem";
             this.showLogToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showLogToolStripMenuItem.Text = "Show log";
+            this.showLogToolStripMenuItem.Click += new System.EventHandler(this.showLogToolStripMenuItem_Click);
+            // 
+            // bn_ConnectToWifi
+            // 
+            this.bn_ConnectToWifi.Location = new System.Drawing.Point(9, 127);
+            this.bn_ConnectToWifi.Name = "bn_ConnectToWifi";
+            this.bn_ConnectToWifi.Size = new System.Drawing.Size(220, 23);
+            this.bn_ConnectToWifi.TabIndex = 1;
+            this.bn_ConnectToWifi.Text = "Connect";
+            this.bn_ConnectToWifi.UseVisualStyleBackColor = true;
+            this.bn_ConnectToWifi.Click += new System.EventHandler(this.bn_ConnectToWifi_Click);
+            // 
+            // tb_nameSelectedWiFi
+            // 
+            this.tb_nameSelectedWiFi.Location = new System.Drawing.Point(65, 63);
+            this.tb_nameSelectedWiFi.Name = "tb_nameSelectedWiFi";
+            this.tb_nameSelectedWiFi.Size = new System.Drawing.Size(164, 20);
+            this.tb_nameSelectedWiFi.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lb_WiFiConnectState);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.tb_PasswordToSelectedWiFi);
+            this.groupBox1.Controls.Add(this.bn_ConnectToWifi);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tb_nameSelectedWiFi);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(13, 208);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(235, 157);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Selected wifi point";
+            // 
+            // lb_WiFiConnectState
+            // 
+            this.lb_WiFiConnectState.AutoSize = true;
+            this.lb_WiFiConnectState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_WiFiConnectState.Location = new System.Drawing.Point(62, 30);
+            this.lb_WiFiConnectState.Name = "lb_WiFiConnectState";
+            this.lb_WiFiConnectState.Size = new System.Drawing.Size(49, 16);
+            this.lb_WiFiConnectState.TabIndex = 8;
+            this.lb_WiFiConnectState.Text = "status";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "State";
+            // 
+            // tb_PasswordToSelectedWiFi
+            // 
+            this.tb_PasswordToSelectedWiFi.Location = new System.Drawing.Point(65, 97);
+            this.tb_PasswordToSelectedWiFi.Name = "tb_PasswordToSelectedWiFi";
+            this.tb_PasswordToSelectedWiFi.PasswordChar = '*';
+            this.tb_PasswordToSelectedWiFi.Size = new System.Drawing.Size(164, 20);
+            this.tb_PasswordToSelectedWiFi.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Password";
+            // 
+            // lView_wifiConnects
+            // 
+            this.lView_wifiConnects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colAccessPoint,
+            this.colSignalPower});
+            this.lView_wifiConnects.FullRowSelect = true;
+            this.lView_wifiConnects.Location = new System.Drawing.Point(13, 45);
+            this.lView_wifiConnects.Name = "lView_wifiConnects";
+            this.lView_wifiConnects.Size = new System.Drawing.Size(235, 157);
+            this.lView_wifiConnects.TabIndex = 6;
+            this.lView_wifiConnects.UseCompatibleStateImageBehavior = false;
+            this.lView_wifiConnects.View = System.Windows.Forms.View.Details;
+            this.lView_wifiConnects.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lView_wifiConnects_MouseDoubleClick);
+            // 
+            // colAccessPoint
+            // 
+            this.colAccessPoint.Text = "Access point";
+            this.colAccessPoint.Width = 103;
+            // 
+            // colSignalPower
+            // 
+            this.colSignalPower.Text = "Signal strength";
+            this.colSignalPower.Width = 125;
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // refreshPointsToolStripMenuItem
+            // 
+            this.refreshPointsToolStripMenuItem.Name = "refreshPointsToolStripMenuItem";
+            this.refreshPointsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.refreshPointsToolStripMenuItem.Text = "Refresh points";
+            this.refreshPointsToolStripMenuItem.Click += new System.EventHandler(this.refreshPointsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -238,10 +264,10 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button bn_ConnectToWifi;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_nameSelectedWiFi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tb_PasswordToSelectedWiFi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_WiFiConnectState;
         private System.Windows.Forms.Label label3;
@@ -252,6 +278,8 @@
         private System.Windows.Forms.ListView lView_wifiConnects;
         private System.Windows.Forms.ColumnHeader colAccessPoint;
         private System.Windows.Forms.ColumnHeader colSignalPower;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshPointsToolStripMenuItem;
     }
 }
 
